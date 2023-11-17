@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6444e415-dfed-4e0c-92b3-1c4c7181e160">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Passenger]]>
+	</queryString>
+	<field name="PassengerTicket_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Passenger_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Departure" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Destination" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cost" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Passenger_TP" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="15" width="100" height="20" uuid="20debf30-c706-4897-a96e-e00d8e17a0ea"/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="244" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="58" width="100" height="20" uuid="7ef754b3-7142-4e4f-b411-98e4b0506c2e"/>
+				<textFieldExpression><![CDATA[$F{Passenger_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="107" width="100" height="20" uuid="b8264cf0-015f-4563-b1f4-bb2d8f1b9893"/>
+				<textFieldExpression><![CDATA[$F{Departure}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="58" width="100" height="20" uuid="96624496-201a-4b93-ab56-ff1488a92c5a"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="107" width="100" height="20" uuid="0632b631-b913-4b8a-b53c-a7a3397dcea1"/>
+				<text><![CDATA[Departure]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="408" y="104" width="111" height="20" uuid="ec6bb7a8-bebb-403b-970a-0e0e48a72e1f"/>
+				<textFieldExpression><![CDATA[$F{Destination}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="104" width="100" height="20" uuid="b1cc0d3a-0c17-4b67-9206-2719c98fd272"/>
+				<text><![CDATA[Destination]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="153" width="100" height="20" uuid="5871b3de-0d32-47ed-97a8-ca6a7a487670"/>
+				<textFieldExpression><![CDATA[$F{Cost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="153" width="100" height="20" uuid="9491f387-b480-4521-a032-bd29b98d0c1a"/>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="194" width="100" height="20" uuid="b1615e0d-c8db-45d4-a391-2a684d30272f"/>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="194" width="100" height="20" uuid="1fbb0a7e-34da-4648-a855-ac909ead9fdb"/>
+				<textFieldExpression><![CDATA[$F{Passenger_TP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="19" width="100" height="20" uuid="a34d9912-670c-4ae6-8279-bea27361b114"/>
+				<text><![CDATA[Ticket Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="19" width="100" height="20" uuid="cb973f10-4c86-4c35-b47d-5adf4d5b1e48"/>
+				<textFieldExpression><![CDATA[$F{PassengerTicket_Id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

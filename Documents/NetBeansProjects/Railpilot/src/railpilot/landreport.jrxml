@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80df1861-9fc6-42ea-970a-29761455ea04">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from passenger]]>
+	</queryString>
+	<field name="PassengerTicket_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Passenger_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Departure" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Destination" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cost" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Passenger_TP" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="107" splitType="Stretch">
+			<textField>
+				<reportElement x="652" y="68" width="150" height="39" uuid="73de685e-5351-4da7-9d97-4412222ed63c"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="351" y="0" width="215" height="107" uuid="28ee3b37-dbe2-4b14-ae7b-36df9cf437bd"/>
+				<imageExpression><![CDATA["C:\\Users\\Sanjula\\Downloads\\Locomotive Train Transportation T-Shirt.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="280" splitType="Prevent">
+			<textField>
+				<reportElement x="630" y="102" width="161" height="20" uuid="66e28894-4a80-457b-9444-7bbadc52582c"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Destination}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="53" width="100" height="20" uuid="f7891782-ce68-4105-aba5-2259e39513e5"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="14" width="182" height="20" uuid="83c23588-06db-4287-93e2-d5495fc08d1e"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PassengerTicket_Id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="148" width="100" height="20" uuid="8b9bc16b-4fbe-471b-a29d-48c80ca5ff7e"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="148" width="182" height="20" uuid="77c40458-6c3c-4d99-a59c-98ead96757d7"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rs." + $F{Cost} + "/="
+]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="189" width="100" height="20" uuid="4571f083-e22d-4ccc-8a91-080cdd1dcd64"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="14" width="100" height="20" uuid="b1d06688-e76f-4ff8-8865-3bfb452cb780"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Ticket Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="53" width="182" height="20" uuid="134e0361-aae5-43e8-a889-f8d8a3746f68"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Passenger_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="189" width="182" height="20" uuid="a69450fa-6ec6-45a3-8938-a82a9847f85f"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Passenger_TP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="502" y="102" width="100" height="20" uuid="f7fdea7c-ed93-44ae-a1c5-44821c200adc"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Destination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="102" width="100" height="20" uuid="349b573f-849f-4f59-b7bd-9e7ea5b0695d"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<text><![CDATA[Departure]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="102" width="182" height="20" uuid="33f89ba5-fe1d-447a-955d-2942544ceff4"/>
+				<textElement>
+					<font fontName="Lucida Bright" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Departure}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="251" width="802" height="29" uuid="9231e37f-5f94-4e6e-b687-86a4e0334e3e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Bright" size="20"/>
+				</textElement>
+				<text><![CDATA[Thank You for choosing Railpilot!]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
